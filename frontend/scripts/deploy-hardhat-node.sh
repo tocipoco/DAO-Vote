@@ -9,7 +9,8 @@ HARDHAT_NODE_URL="http://${HARDHAT_NODE_HOST}:${HARDHAT_NODE_PORT}"
 TIMEOUT_SECONDS=60 # Max time to wait for Hardhat Node to start
 CHECK_INTERVAL_SECONDS=1 # How often to poll the node
 
-cd "${SCRIPT_DIR}/../../fhevm-hardhat-template"
+# Move into backend project directory (contains Hardhat config)
+cd "${SCRIPT_DIR}/../../backend"
 
 echo "--- Starting Hardhat Node in background ---"
 # Start Hardhat Node in the background, redirecting output to a log file

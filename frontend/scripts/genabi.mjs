@@ -46,7 +46,8 @@ function deployOnHardhatNode() {
     return;
   }
   try {
-    execSync(`./deploy-hardhat-node.sh`, {
+    // Use bash to avoid executable bit issues on CI
+    execSync(`bash ./deploy-hardhat-node.sh`, {
       cwd: path.resolve("./scripts"),
       stdio: "inherit",
     });
